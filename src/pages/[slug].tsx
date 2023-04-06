@@ -3,7 +3,7 @@ import { filterPosts } from "@/src/libs/utils/notion"
 import Layout from "@components/Layout"
 import CONFIG from "@/site.config"
 import { NextPageWithLayout } from "@pages/_app"
-import { TPost } from "../types"
+import { Post } from "../types"
 import CustomError from "@containers/CustomError"
 import { getPostBlocks, getPosts } from "@libs/apis"
 
@@ -40,7 +40,7 @@ export async function getStaticProps({ params: { slug } }: any) {
 }
 
 type Props = {
-  post: TPost
+  post: Post
   blockMap: any
 }
 

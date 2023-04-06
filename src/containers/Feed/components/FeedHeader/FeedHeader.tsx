@@ -1,10 +1,10 @@
-import { TCategories } from "@/src/types"
+import { Category } from "@/src/types"
 import React from "react"
 import CategorySelect from "./CategorySelect"
 import OrderButtons from "./OrderButtons"
 
 type Props = {
-  categories: TCategories
+  categories: Category
 }
 
 const FeedHeader: React.FC<Props> = ({ categories }) => {

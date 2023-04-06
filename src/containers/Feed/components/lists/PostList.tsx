@@ -1,12 +1,12 @@
 import PostCard from "@components/PostCard"
-import { TPosts } from "@/src/types"
+import { Posts } from "@/src/types"
 import { useRouter } from "next/router"
 import React, { useEffect, useState } from "react"
 import { DEFAULT_CATEGORY } from "@/src/constants"
 
 type Props = {
   q: string
-  posts: TPosts
+  posts: Posts
 }
 
 const PostList: React.FC<Props> = ({ q, posts }) => {

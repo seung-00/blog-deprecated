@@ -5,7 +5,7 @@ import {
   Collection,
   CollectionRow,
 } from "react-notion-x"
-import { TPost } from "@/src/types"
+import { Post } from "@/src/types"
 import React from "react"
 
 const mapPageUrl = (id: string) => {
@@ -14,7 +14,7 @@ const mapPageUrl = (id: string) => {
 
 type Props = {
   blockMap: any
-  data: TPost
+  data: Post
 }
 
 const PageDetail: React.FC<Props> = ({ blockMap, data }) => {

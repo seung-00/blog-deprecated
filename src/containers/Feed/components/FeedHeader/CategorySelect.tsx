@@ -1,12 +1,12 @@
 import { DEFAULT_CATEGORY } from "@/src/constants"
 import useDropdown from "@hooks/useDropdown"
-import { TCategories } from "@/src/types"
+import { Category } from "@/src/types"
 import { useRouter } from "next/router"
 import React from "react"
 import { MdExpandMore } from "react-icons/md"
 
 type Props = {
-  data: TCategories
+  data: Category
 }
 
 const CategorySelect: React.FC<Props> = ({ data }) => {

@@ -1,12 +1,12 @@
 import Layout from "@components/Layout"
 import CONFIG from "../../site.config"
 import { NextPageWithLayout } from "./_app"
-import { TPosts, TTags } from "../types"
+import { Posts, Tag } from "../types"
 import CustomError from "../containers/CustomError"
 
 type Props = {
-  tags: TTags
-  posts: TPosts
+  tags: Tag
+  posts: Posts
 }
 
 const NotFoundPage: NextPageWithLayout<Props> = () => {

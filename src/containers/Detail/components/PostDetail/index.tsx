@@ -5,7 +5,7 @@ import {
   Collection,
   CollectionRow,
 } from "react-notion-x"
-import { TPost } from "@/src/types"
+import { Post } from "@/src/types"
 import React from "react"
 import PostHeader from "./PostHeader"
 import Footer from "./PostFooter"
@@ -18,48 +18,38 @@ const mapPageUrl = (id: string) => {
 
 type Props = {
   blockMap: any
-  data: TPost
+  data: Post
 }
 
 const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
   const category = (data.category && data.category?.[0]) || undefined
 
   return (
-    <div
-      className={`m-auto max-w-4xl bg-white dark:bg-zinc-700 rounded-3xl py-12 px-6 shadow-md`}
-    >
-      <article className=" m-auto max-w-2xl">
-        {category && (
-          <Category
-            className="mb-2"
-            readOnly={data.status?.[0] === "PublicOnDetail"}
-          >
-            {category}
-          </Category>
-        )}
-        {data.type[0] === "Post" && <PostHeader data={data} />}
-        {blockMap && (
-          <div className="-mt-4">
-            <NotionRenderer
-              recordMap={blockMap}
-              components={{
-                equation: Equation,
-                code: Code,
-                collection: Collection,
-                collectionRow: CollectionRow,
-              }}
-              mapPageUrl={mapPageUrl}
-            />
-          </div>
-        )}
+      <div className="m-auto max-w-3xl my-10">
+        <article className="my-10">
+          {data.type[0] === "Post" && <PostHeader data={data} />}
+          {blockMap && (
+            <div className="-mt-4 ">
+              <NotionRenderer
+                recordMap={blockMap}
+                components={{
+                  equation: Equation,
+                  code: Code,
+                  collection: Collection,
+                  collectionRow: CollectionRow,
+                }}
+                mapPageUrl={mapPageUrl}
+              />
+            </div>
+          )}
+        </article>
         {data.type[0] === "Post" && (
-          <>
-            <Footer />
-            <CommentBox data={data} />
-          </>
+            <>
+              <Footer />
+              <CommentBox data={data} />
+            </>
         )}
-      </article>
-    </div>
+      </div>
   )
 }
 

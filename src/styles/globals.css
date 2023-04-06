@@ -112,3 +112,14 @@ nav {
     overflow-x: hidden;
   }
 }
+
+/* custom */
+.divide-y {
+  box-sizing: border-box;
+  border: 0 solid lightgrey;
+  border-bottom-width: calc(1px);
+}
+
+.bg {
+  --tw-bg-opacity: 0.4;
+}

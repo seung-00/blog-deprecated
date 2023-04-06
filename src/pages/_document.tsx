@@ -41,7 +41,7 @@ class MyDocument extends Document {
             <meta property="og:type" content="website" />
             <meta property="og:image" content="https://holden-log.vercel.app/avatar.svg" />
         </Head>
-        <body className="bg-day dark:bg-night">
+        <body className="bg-day bg dark:bg-night">
           <Main />
           <NextScript />
         </body>

@@ -2,12 +2,12 @@ import Link from "next/link"
 import CONFIG from "site.config"
 import { formatDate } from "@/src/libs/utils"
 import Tag from "./Tag"
-import { TPost } from "../types"
+import { Post } from "../types"
 import Image from "next/image"
 import Category from "./Category"
 
 type Props = {
-  data: TPost
+  data: Post
 }
 
 const PostCard: React.FC<Props> = ({ data }) => {

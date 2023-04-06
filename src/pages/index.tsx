@@ -6,7 +6,7 @@ import Layout from "@components/Layout"
 import Feed from "@containers/Feed"
 import CONFIG from "../../site.config"
 import { NextPageWithLayout } from "./_app"
-import { TCategories, TPosts, TTags } from "../types"
+import { Category, Posts, Tag } from "../types"
 import { getPosts } from "../libs/apis"
 import { DEFAULT_CATEGORY } from "../constants"
 
@@ -36,9 +36,9 @@ export async function getStaticProps() {
 }
 
 type Props = {
-  categories: TCategories
-  tags: TTags
-  posts: TPosts
+  categories: Category
+  tags: Tag
+  posts: Posts
 }
 
 const FeedPage: NextPageWithLayout<Props> = ({ categories, tags, posts }) => {

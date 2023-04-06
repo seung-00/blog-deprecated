@@ -3,15 +3,15 @@ import { useState } from "react"
 import * as Cards from "./components/cards"
 import * as Lists from "./components/lists"
 
-import { TCategories, TPosts, TTags } from "@customTypes/index"
+import { Category, Posts, Tag } from "@customTypes/index"
 import SearchInput from "./components/SearchInput"
 import { FeedHeader } from "./components/FeedHeader"
 import Footer from "./components/Footer"
 
 type Props = {
-  categories: TCategories
-  tags: TTags
-  posts: TPosts
+  categories: Category
+  tags: Tag
+  posts: Posts
 }
 
 const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
@@ -20,7 +20,6 @@ const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
   return (
     <div className="block md:grid grid-cols-12 gap-6">
       <div className="hidden lg:block col-span-2">
-        {/* <Lists.CategoryList data={categories} /> */}
         <Lists.TagList data={tags} />
       </div>
       <div className="col-span-12 lg:col-span-7">

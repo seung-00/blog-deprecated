@@ -1,10 +1,10 @@
 export type PostStatus = "Private" | "Public" | "PublicOnDetail"
-export type TPostType = "Post" | "Paper" | "Page"
+export type PostType = "Post" | "Paper" | "Page"
 
-export type TPost = {
+export type Post = {
   id: string
   date: { start_date: string }
-  type: TPostType[]
+  type: PostType[]
   slug: string
   tags?: string[]
   category?: string[]
@@ -21,12 +21,12 @@ export type TPost = {
   thumbnail?: string
 }
 
-export type TPosts = TPost[]
+export type Posts = Post[]
 
-export type TTags = {
+export type Tag = {
   [tagName: string]: number
 }
-export type TCategories = {
+export type Category = {
   [category: string]: number
 }
 

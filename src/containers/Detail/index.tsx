@@ -1,4 +1,4 @@
-import { TPost } from "@/src/types"
+import { Post } from "@/src/types"
 import useMermaidEffect from "./hooks/useMermaidEffect"
 import PostDetail from "./components/PostDetail"
 import PageDetail from "./components/PageDetail"
@@ -9,7 +9,7 @@ const mapPageUrl = (id: string) => {
 
 type Props = {
   blockMap: any
-  data: TPost
+  data: Post
 }
 
 const Detail: React.FC<Props> = ({ blockMap, data }) => {

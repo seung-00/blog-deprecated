@@ -1,8 +1,8 @@
-import { TPosts, PostStatus, TPostType } from "@/src/types"
+import { Posts, PostStatus, PostType } from "@/src/types"
 
 type Options = {
   acceptStatus?: PostStatus[]
-  acceptType?: TPostType[]
+  acceptType?: PostType[]
 }
 
 const initialOption: Options = {
@@ -14,7 +14,7 @@ const tomorrow = new Date(current)
 tomorrow.setDate(tomorrow.getDate() + 1)
 tomorrow.setHours(0, 0, 0, 0)
 
-export function filterPosts(posts: TPosts, options: Options = initialOption) {
+export function filterPosts(posts: Posts, options: Options = initialOption) {
   const { acceptStatus = ["Public"], acceptType = ["Post"] } = options
   const filteredPosts = posts
     // filter data
